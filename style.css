@@ -1,0 +1,252 @@
+html{
+    padding: 0;
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: hsl(185, 41%, 84%);
+}
+.main{
+    display: block;
+}
+#title{
+    color: hsl(186, 14%, 43%);
+    max-width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.container{
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    border-radius: 20px;
+    flex-direction: column;
+    vertical-align: middle;
+}
+
+.user-inputs{
+    height: 50%;
+    margin-left: 5px;
+}
+
+label{
+    display: block;
+    color: hsl(186, 14%, 43%);
+}
+
+.inps{
+    text-align: right;
+    height: 100%;
+    width: 90%;
+}
+.inps:focus{
+    border: none;
+    outline: none;
+}
+#inner-symbol{
+    height: auto;
+    max-width: 40px;
+}
+#inp-symbols{
+    width: 100%;
+    /* background-color: hsl(184, 14%, 56%); */
+    border-radius: 0.5rem; 
+    line-height: 2rem;
+    text-align: center;
+}
+img{
+    display: inline;
+    float: left;
+    margin: 7px 0 0 15px;
+}
+input{
+    height: 2rem;
+    width: 18rem;
+    text-align: right;
+    outline: none;
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    font-size: 1.2em;
+    color: hsl(183, 100%, 15%);
+}
+.wrapper{
+    background-color: hsl(189, 41%, 97%);
+    height: 40px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 4px;
+    align-self: center;
+    border-radius: 0.3rem;
+    overflow: hidden;
+}
+
+.wrapper:active{
+    border: 3px solid hsl(172, 67%, 45%);
+}
+
+.wrapper:focus{
+    border: 3px solid hsl(172, 67%, 45%);
+}
+#custom{
+    position: relative;
+    display: none;
+    border-radius: 5px;
+    border: 3px solid hsl(172, 67%, 45%);
+    width: 40%;
+    max-height: 40px;
+    text-align: center;
+    line-height: 40px;
+    top: 2px;
+}
+
+#tip-percent{
+    display: block;
+    max-width: 100%;
+    height: 200px;
+    background-color: #f3f3f3;
+    border-radius: 0.5rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 5px;
+    text-align: center;
+}
+
+.per-buttons{
+    margin: 10px;
+    display: inline;
+    width: 40%;
+    height: 40px;
+    text-align: center;
+    border: none;
+    background-color:  hsl(183, 100%, 15%);
+    color: #f3f3f3;
+    font-weight: bold;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+.per-buttons:focus{
+    background-color: hsl(172, 67%, 45%);
+}
+
+.per-buttons:hover{
+    background-color: hsl(172, 67%, 45%);
+    transition: 0.1s;
+}
+
+#tip-label{
+    position: relative;
+    color: hsl(186, 14%, 43%);
+    top: 30px;
+}
+.outputs{
+    width: 100%;
+    background-color: hsl(183, 100%, 15%);
+    height: 20em;
+    margin-top: 40px;
+    border-radius: 1rem;
+    padding: 30px;
+    text-align: center;
+}
+
+#out-reset{
+    width: 90%;
+    height: 3em;
+    background-color: hsl(172, 67%, 45%);
+    border-radius: 0.5em;
+    border: none;
+    cursor: pointer;
+    margin-top: 0px;
+}
+#out-reset:hover{
+    background-color:  hsl(185, 41%, 84%);
+}
+.out-tags{
+    text-align: left;
+    margin-bottom: 20px;
+    color: #f3f3f3;
+}
+.ind-out{
+    display: inline;
+    width: 46%;
+}
+#final-out{
+    width: 46%;
+    display: block;
+    color: hsl(172, 67%, 45%);
+    position: relative;
+    top: -57%;
+    font-size: 2em;
+    left: 60%;
+    margin-bottom: none;
+    max-height: 80px;
+}
+
+#default-tip:active{
+    background-color: hsl(172, 67%, 45%);
+}
+
+.out-dollar{
+    display: inline;
+    height: 0.8em;
+    color: hsl(172, 67%, 45%);
+    margin-right: 3px;
+}
+.output-amt{
+    line-height: 2em;
+    display: inline;
+}
+span{
+    color: hsl(185, 41%, 84%);
+}
+
+@media screen and (min-width: 1440px){
+    .container{
+        flex-direction: row;
+        justify-content: center;
+        max-width: 60%;
+    }
+    .user-inputs{
+        height: 80%;
+        width: 50%;
+    }
+    .outputs{
+        width: 50%;
+        background-color: hsl(183, 100%, 15%);
+        border-radius: 1rem;
+        padding: 30px;
+        text-align: center;
+        margin-top: 0;
+        height: 25em;
+    }
+    #final-out{
+        top: -40%;
+    }
+    #out-reset{
+        margin-top: 70px;
+    }
+    .main{
+        height: 100%;
+        width: 100%;
+        transform: translate(20%, 0%);
+    }
+    .per-buttons{
+        width: 25%;
+    }
+    #tip-percent{
+        height: 150px;
+    }
+    #custom{
+        width: 25%;
+    }
+}

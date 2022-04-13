@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Tip calculator app</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="icon" href="images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js"></script>
+</head>
+<body>
+    <h1 id="title">SPLI<br>TTER</h1>
+    <div class="main">
+        <div class="container">
+            <!--Div for user inputs-->
+            <div class="user-inputs">
+                <!--Bill Amount-->
+                <label for="bill_amt">Bill</label>
+                <div class="wrapper">
+                    <form action="" enctype="multipart/form-data" name="inp-form">
+                        <div id="inp-symbols"><img src="./images/icon-dollar.svg" alt="">
+                            <input type="text" id="bill_amt" placeholder="0" class="inps" required>
+                        </div>
+                </div>
+                <p id="tip-label">Select tip %</p>
+                <div id="tip-percent">
+                    <button type ="button" class="per-buttons" id="five" value="5" onclick="five_tip();">5%</button>
+                    <button type = "button" class="per-buttons" value="10" id="ten" onclick="ten_tip();">10%</button>
+                    <button type ="button" class="per-buttons" value="15" id="fifteen" onclick="fifteen_tip();">15%</button>
+                    <button type ="button" class="per-buttons" value="25" id="twentyfive" onclick="twentyfive_tip();">25%</button>
+                    <button type ="button" class="per-buttons" value="50" id="fifty" onclick="fifty_tip();">50%</button>
+                    <button type ="button" class="per-buttons" onclick="askinp();" id="hide-cus">Custom</button>
+                    <input type="number" id="custom" min="5" max="100">
+                </div>
+                <!--No of people-->
+                <label for="no_ppl">Number of People</label>
+                <div class="wrapper">
+                        <div id="inp-symbols"><img src="./images/icon-person.svg" alt="">
+                            <input type="tel" id="no_ppl" class="inps" placeholder="0" onchange="calc();" required>
+                            
+                        </div>
+                </div>
+            
+            </div><!--Inputs Div ending-->
+            <div class="outputs">
+                <div class="ind-out">
+                    <p class="out-tags">Tip Amount<br><span>/ person</span></p>
+                    <p class="out-tags">Total<br><span>/ person</span></p>
+                </div>
+                <div id="final-out">
+                    <span class="out-dollar">$</span><p class="output-amt" id="final-tip">0.00</p>
+                    <div id="percent-2"><span class="out-dollar">$</span><p class="output-amt" id="percent">0.00</p></div>
+                </div>
+                <button type="reset" id="out-reset" onclick="res();">RESET</button>
+            </div>
+        </form>
+        </div>                
+    </div>
+</body>
+</html>
