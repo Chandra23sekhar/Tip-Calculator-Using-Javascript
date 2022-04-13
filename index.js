@@ -52,7 +52,7 @@ function calc(){
     //Final calculation.
     bill_amount = parseFloat(document.getElementById("bill_amt").value);
     no_of_people =  parseInt(document.getElementById("no_ppl").value);
-    var total_amt = ((tip / 100) * bill_amount)+bill_amount;
+    var total_amt = ((tip / 100) * bill_amount);
     var tot_per_person = parseFloat(total_amt / no_of_people);
     document.getElementById("percent").innerHTML = tot_per_person.toFixed(2);
     document.getElementById("final-tip").innerHTML = total_amt.toFixed(2);
