@@ -46,7 +46,7 @@ function calc(){
     //Only if user selects a custom input.
     if(document.getElementById("custom").value.length != 0){
         var custom_val = document.getElementById("custom").value;
-        tip_percent = custom_val;
+        tip = custom_val;
     }
 
     //Final calculation.
